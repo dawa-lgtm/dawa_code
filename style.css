@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3em;
+    height: 100vh;
+    width:100vw;
+    background-color: #f7f7f7;
+    color: #111111;
+    position: relative;
+    overflow-x:hidden;
+}
+header{
+    width: 100%;
+    height: 9%;
+    background-color: #333333;
+    color: #111111;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav a{
+    text-decoration: none;
+    color: #5a5a5a;
+    font-size: 23px;
+    font-weight: 400;
+}
+nav{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+main{
+    position: relative;
+    width: 100%;
+    min-height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:50px;
+}
+#home{
+    background-image: url('./image/pfp.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:left 60%;
+}
+#home .container{
+    animation: myAnimation 8s infinite ease-in-out;
+    height: fit-content;
+    width: 30vw;
+    position: absolute;
+    right: 10vh;
+    background-color: rgba(0, 0, 0, 0.602);
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* backdrop-filter: blur(20px); */
+    box-shadow: 0px 0px 15px 3px black;
+    /* animation: myAnimation 8s infinite; */
+}
+.active-nav{
+    color:#007bff;
+    font-weight: bold;
+}
+.container h1{
+    color:#007bff;
+}
+.container p{
+    color: white;
+}
+#project img{
+    height: 400px;
+    width: 500px;
+    object-fit: cover;
+    object-position: center;
+    border: 3px solid beige;
+    box-shadow: 0px 0px 10px 5px #007bff;
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
+
+hr{
+    height:1px;
+    border:none;
+    background-color: yellow;
+    width: 80%;
+}
+#siteReport{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding:50px 100px;
+    line-height: 1.2em;
+    gap:20px;
+    font-size: 1.2em;
+}
+h1{
+    color:#007bff;
+}
+#siteReport img{
+    max-width: 80%;
+    min-width: 40%;
+    outline:1px solid green;
+    object-fit: cover;
+    object-position: center;
+}
+h1{
+    line-height: 1.1em;
+}
+iframe{
+    width: 80%;
+    height: 80vh;
+}
+#contact {
+    font-size: 1.1em;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+#contact .container h1 {
+    color: #007bff;
+    font-size: 2rem;
+}
+
+#contact .container .name,
+#contact .container .email,
+#contact .container .phoneNumber {
+    display: block;
+    font-size: 1rem;
+    color: #5a5a5a;
+    margin: 0.2rem 0;
+}
+
+#contact form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #fff;
+    padding: 1.5rem;
+    border: 1px solid #5a5a5a;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact form label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#contact form input[type="text"] {
+    width: 100%;
+    height: 45px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #333333;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+#contact form input[type="text"]:focus {
+    border-color: #007bff;
+    outline-color: #007bff;
+}
+
+#contact form button {
+    height: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #5a5a5a60;
+    color: var(--text);
+    border: 2px solid #333333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#contact form button:hover {
+    background-color: #007bff;
+}
+
+#contact form button:active {
+    background-color: green;
+    color: #fff;
+    transform: scale(0.98);
+}
+
+#project {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#project img {
+    height: 500px;
+    width: clamp(300px,40%,600px);
+    object-fit: cover;
+    border: 3px solid #f5f5dc; 
+    box-shadow: 0px 0px 5px 2px #007bff; 
+    border-radius: 10px;
+}
+
+#project img:nth-child(1) {
+    margin-right: 20px;
+}
+#siteReport {
+    width: clamp(100px,75%,1000px);
+    margin: auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+#siteReport h1 {
+    text-align: center;
+    color: #007bff;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+
+#siteReport h3 {
+    color: #5a5a5a;
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+#siteReport hr {
+    border: none;
+    height: 2px;
+    background-color: #ffd700; 
+    margin: 20px 0;
+}
+
+
+#siteReport p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+
+#siteReport img {
+    max-width: 100%;
+    margin-top: 15px;
+    border: 2px solid #333333; 
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+#siteReport a {
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+#siteReport a:hover {
+    color: #ffdf85; 
+}
+@keyframes myAnimation{
+    0%{
+        border-radius: 0% 25% 0% 25% / 25% 25% 25% 25%;
+    }
+    25%{
+        border-radius: 26% 25% 22% 23% / 25% 25% 25% 25%;
+    }
+    50%{
+        border-radius: 26% 0% 22% 0% / 25% 25% 25% 25%;
+    }
+    75%{
+        border-radius: 26% 25% 22% 23% / 25% 25% 25% 25%;
+    }
+    100%{
+        border-radius: 0% 25% 0% 25% / 25% 25% 25% 25%;
+    }
+
+}
+@media (max-width: 768px) {
+    header {
+        height: 10%;
+        justify-content: flex-start;
+        padding: 0 10px;
+    }
+
+    nav {
+        width: 100%;
+        gap: 15px;
+        justify-content: space-around;
+    }
+
+    main {
+        flex-direction: column;
+        gap: 30px;
+    }
+    #home .container{
+        position: relative;
+        right:unset;
+        width:unset;
+    }
+
+
+    .container {
+        width: 80%;
+        text-align: center;
+        align-items: center;
+    }
+    #project{
+        flex-direction: column;
+    }
+
+    #project img {
+        height: 300px;
+        width: 80%;
+        margin: auto;
+    }
+
+    #siteReport {
+        padding: 20px;
+    }
+
+    #contact .container {
+        width: 90%;
+    }
+
+    #contact form {
+        padding: 1rem;
+    }
+
+    iframe {
+        width: 100%;
+        height: 60vh;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 1em;
+    }
+
+    header {
+        height: fit-content;
+        padding:5px;
+    }
+    nav{
+        flex-direction: column;
+        gap:1.5em;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 10px;
+        gap: 20px;
+    }
+    #home .container{
+        position: relative;
+        right:unset;
+        width:unset;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .container img {
+        width: 100%;
+        height: auto;
+    }
+
+    #project {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #project img {
+        height: auto;
+        width: 90%;
+        margin: auto;
+    }
+
+    #siteReport {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    #siteReport img {
+        max-width: 90%;
+    }
+
+    #contact {
+        padding: 1rem;
+    }
+
+    #contact .container {
+        width: 100%;
+    }
+
+    #contact form {
+        padding: 1rem;
+        gap: 10px;
+    }
+
+    #contact form input[type="text"],
+    #contact form button {
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    iframe {
+        width: 100%;
+        height: 50vh;
+    }
+}
